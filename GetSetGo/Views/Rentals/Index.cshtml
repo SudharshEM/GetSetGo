@@ -1,0 +1,39 @@
+﻿@model GetSetGo.ViewModels.RentalFormViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="d-flex bd-highlight mb-3 align-items-center">
+    <div class="p-2 bd-highlight">
+        <h2 class="align-middle">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Rentals |</span>
+        </h2>
+    </div>
+    <div class="p-2 bd-highlight">
+        <a href="/Rentals/New" class="btn btn-primary"><i class="fas fa-plus"></i> New Rental</a>
+    </div>
+    <div class="ml-auto p-2 bd-highlight">
+        <button id="show-active" class="btn float-right js-active">Show Active Rentals</button>
+    </div>
+</div>
+
+<table id="rentals" class="table">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Vehicle Name</th>
+            <th>Vehicle Plate Number</th>
+            <th>Vehicle Color</th>
+            <th>Rented Date & Time</th>
+            <th>Returned Date & Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+@section scripts{
+    @Scripts.Render("~/Scripts/ThisProject/Rentals/Index.js")
+}

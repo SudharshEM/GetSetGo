@@ -1,0 +1,43 @@
+﻿@model GetSetGo.ViewModels.RentalFormViewModel
+
+@{
+    ViewBag.Title = "New Rental";
+}
+
+<div class="container">
+    <h2>New Rental</h2>
+    <form id="newRental">
+        <div class="form-group">
+            <lable>Customer</lable>
+            <div class="tt-container">
+                <input id="customer" name="customer" data-rule-validCustomer="true" type="text" value="" class="form-control typeahead" autocomplete="off" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <lable>Vehicle</lable>
+            <div class="tt-container">
+                <input id="vehicle" name="vehicle" data-rule-validVehicle="true" type="text" value="" class="form-control typeahead" autocomplete="off" required />
+            </div>
+        </div>
+
+        <div class="card form-group gj-hidden" style="width: 20rem; border-radius: 10px;">
+            <div class="card-body">
+                <h6 class="font-weight-bold text-uppercase">Rental Detail</h6>
+                <div id="customer-detail"></div>
+                <div id="vehicle-detail"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button id="submit" class="btn btn-primary">Submit</button>
+            <input type="button" id="reset" class="btn btn-danger" value="Reset">
+        </div>
+    </form>
+</div>
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/ThisProject/Rentals/NewRental.js")
+}

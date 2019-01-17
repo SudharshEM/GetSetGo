@@ -1,0 +1,42 @@
+﻿@model GetSetGo.ViewModels.VehicleFormViewModel
+@{
+    ViewBag.Title = "Vehicles";
+}
+
+<div class="d-flex bd-highlight mb-3 align-items-center">
+    <div class="p-2 bd-highlight">
+        <h2 class="align-middle">
+            <i class="fas fa-car"></i>
+            Vehicles |
+        </h2>
+    </div>
+    <div class="p-2 bd-highlight">
+        <a href="/Vehicles/New" class="btn btn-primary"><i class="fas fa-plus"></i> New Vehicle</a>
+    </div>
+    <div class="p-2 bd-highlight">
+        <a href="/VehicleTypes/Index" class="">Vehicle Types <i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+    <div class="ml-auto p-2 bd-highlight">
+        <button id="show-available" class="btn float-right js-active">Show Available</button>
+    </div>
+</div>
+
+<table id="vehicles" class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Plate Number</th>
+            <th>Color</th>
+            <th>Availability</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+@section scripts
+{
+    @Scripts.Render("~/Scripts/ThisProject/Vehicles/List.js")
+}
+

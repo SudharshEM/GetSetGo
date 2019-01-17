@@ -1,0 +1,57 @@
+﻿@model GetSetGo.ViewModels.CustomerFormViewModel
+@{
+    ViewBag.Title = "Customers";
+}
+
+<div class="d-flex bd-highlight mb-3 align-items-center">
+    <div class="p-2 bd-highlight">
+        <h2 class="align-middle">
+            <i class="fas fa-users"></i>
+            Customers |
+        </h2>
+    </div>
+    <div class="p-2 bd-highlight">
+        <a href="/Customers/New" class="btn btn-primary"><i class="fas fa-plus"></i> New Customer</a>
+    </div>
+    <div class="ml-auto p-2 bd-highlight">
+        <button id="show-active" class="btn float-right js-active">Show Active Customers</button>
+    </div>
+</div>
+
+<table id="customers" class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Phone</th>
+            <th>Driving Licence</th>
+            <th>Vehicle Rented</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @*@foreach (var customer in Model.Customers)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null)
+                    </td>
+                    <td>@customer.DateOfBirth.ToShortDateString()</td>
+                    <td>@customer.Phone</td>
+                    <td>@customer.DrivingLicence</td>
+                    <td>
+                        <button data-customer-id="@customer.Id" class="btn btn-sm btn-danger js-delete">Delete</button>
+                    </td>
+                </tr>
+            }*@
+    </tbody>
+</table>
+
+@section scripts
+{
+    @Scripts.Render("~/Scripts/ThisProject/Customers/Index.js")
+}
+
+
+
+

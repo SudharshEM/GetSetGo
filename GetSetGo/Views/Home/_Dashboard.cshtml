@@ -1,0 +1,96 @@
+﻿@model GetSetGo.Models.Summary
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-auto mb-4">
+            <div class="card text-white bg-primary o-hidden h-100" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <i class="fas fa-dollar-sign fa-4x"></i>
+                            <h5 class="card-title">Rentals</h5>
+                        </div>
+                        <div class="col">
+                            <h5>Total @Model.TotalRentals</h5>
+                            <h5>Active @Model.TotalActiveRentals</h5>
+                        </div>
+                    </div>
+                    <p class="card-text">You can record new, edit and track existing rentals.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a class="card-link" href="/Rentals/New">
+                            <i class="fas fa-plus"></i> Add Rental
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="card-link" href="/Rentals/Index">
+                            <i class="fas fa-list"></i> Show Rentals
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="col-auto mb-4">
+            <div class="card text-white bg-success o-hidden h-100" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <i class="fas fa-users fa-4x"></i>
+                            <h5 class="card-title">Customer</h5>
+                        </div>
+                        <div class="col">
+                            <h5>Total @Model.TotalCustomers</h5>
+                            <h5>Inactive @Model.TotalInactiveCustomers</h5>
+                        </div>
+                    </div>
+                    <p class="card-text">You can record new, edit and delete existing customers.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a class="card-link" href="/Customers/New">
+                            <i class="fas fa-plus"></i> Add Customer
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="card-link" href="/Customers/Index">
+                            <i class="fas fa-list"></i> Show Customers
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-auto mb-4">
+            <div class="card text-white bg-warning o-hidden h-100" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <i class="fas fa-car fa-4x"></i>
+                            <h5 class="card-title">Vehicle</h5>
+                        </div>
+                        <div class="col">
+                            <h5>Total @Model.TotalVehicles</h5>
+                            <h5>Available @Model.TotalAvailableVehicles</h5>
+                        </div>
+                    </div>
+                    <p class="card-text">You can record new, edit and delete existing vehicles.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a class="card-link" href="/Vehicles/New">
+                            <i class="fas fa-plus"></i> Add Vehicle
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="card-link" href="/Vehicles/Index">
+                            <i class="fas fa-list"></i> Show Vehicles
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

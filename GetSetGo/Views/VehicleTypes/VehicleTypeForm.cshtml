@@ -1,0 +1,39 @@
+﻿@model GetSetGo.ViewModels.VehicleTypeFormViewModel
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>@Model.Title Vehicle Type</h2>
+
+@using (Html.BeginForm("Save", "VehicleTypes"))
+{
+    <div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VehicleType.Id)
+            @Html.EditorFor(model => model.VehicleType.Id, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.VehicleType.Id, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VehicleType.Name)
+            @Html.TextBoxFor(model => model.VehicleType.Name, null, new { @class = "form-control", autocomplete = "off" })
+            @Html.ValidationMessageFor(model => model.VehicleType.Name, "", new { @class = "text-danger" })
+        </div>
+
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn">Save</button>
+    </div>
+}
+
+<p>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</p>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
