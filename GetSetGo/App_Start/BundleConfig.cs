@@ -18,7 +18,6 @@ namespace GetSetGo
                         "~/scripts/typeahead.bundle.js",
                         "~/scripts/toastr.js",
                         "~/scripts/moment.min.js",
-                        "~/Scripts/gijgo/combined/gijgo.min.js",
                         "~/Content/fontawesome/js/all.js",
                         "~/Scripts/sidebar.js",
                         //"~/Scripts/sidebar-pro.js",
